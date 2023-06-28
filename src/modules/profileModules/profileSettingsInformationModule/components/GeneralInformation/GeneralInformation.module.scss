@@ -1,0 +1,56 @@
+@import 'common/styles/mixins.scss';
+@import 'common/styles/variables.scss';
+
+.container {
+  margin-top: 16px;
+  @include flex-column;
+  justify-content: space-between;
+  width: 494px;
+  row-gap: 22px;
+
+  .line {
+    border-bottom: 1px solid $dark300;
+    position: relative;
+    left: -47.5%;
+    width: 148%;
+  }
+
+  .btn {
+    align-self: flex-end;
+    width: 159px;
+  }
+
+  .calendar {
+    display: flex;
+    flex-direction: column;
+    label {
+      color: $dark100;
+      @include text(14px, 400, 24px, $dark100)
+    }
+    .calendarInput {
+      padding: 6px 12px;
+      color: white;
+      width: fit-content;
+      border-radius: 2px;
+      border: 1px solid $dark300;
+      @include text(16px, 400, 24px);
+      font-family: inherit;
+      cursor: pointer;
+      background: $dark500 url("../../../../../../public/images/calendar.png") no-repeat 90%;
+      &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+      }
+    }
+  }
+
+
+  textarea {
+    background-color: $dark300;
+    margin-bottom: 24px;
+    border: 1px solid $dark300;
+    resize: none;
+    border-radius: 2px;
+    color: white;
+  }
+}
+

@@ -1,0 +1,19 @@
+@import 'common/styles/mixins.scss';
+@import 'common/styles/variables.scss';
+
+.container {
+  .avatarFromServer {
+    border-radius: 50%;
+  }
+
+  .borderDefault {
+    background-color: $dark500;
+    @include flex-center;
+    border-radius: 50%;
+    > img {
+      border-radius: 50%;
+    }
+  }
+}
+
+

@@ -1,0 +1,34 @@
+@import "common/styles/mixins";
+@import "common/styles/variables";
+.container {
+  @include flex-column;
+  position: relative;
+  .showmenu {
+    cursor: pointer;
+  }
+
+  .menu {
+    width: 137px;
+    height: 85px;
+    position: absolute;
+    top: 35px;
+    left: -114px;
+    border: 1px #4c4c4c solid;
+    background-color: black;
+    z-index: 99;
+
+    .action {
+      display: flex;
+      justify-content: start;
+      margin: 10px 0 12px 10px;
+      cursor: pointer;
+
+      .btn {
+        font-size: 15px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
